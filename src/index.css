@@ -1,11 +1,10 @@
+:root {
+  --screenWidth: 768px;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.page-wrapper {
-  max-width: 768px;
-  margin: auto;
 }

@@ -66,7 +66,7 @@ function Home() {
   return (
     <>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className="header-toolbar">
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Home
           </Typography>
@@ -103,11 +103,9 @@ function Home() {
           </div>
         </Toolbar>
       </AppBar>
-      <main
-        style={{ maxWidth: "768px", margin: "auto", padding: "50px 10px 10px" }}
-      >
+      <main className="home-content">
         <p>Please pick your favorite fruits below!</p>
-        <div className="fruit-options">
+        <div className="fruit-list">
           {FRUITS.map((name, idx) => (
             <Chip
               key={idx}
@@ -118,7 +116,7 @@ function Home() {
             />
           ))}
         </div>
-        <p style={{ marginBottom: 5 }}>Favorite fruits</p>
+        <p className="favorite-fruits-label">Favorite fruits</p>
         <div id="selected-fruits">
           {selectedFruits.length === 0 ? (
             <Box
@@ -144,7 +142,6 @@ function Home() {
               }}
             >
               {selectedFruits.map((fruit, idx) => {
-                const labelId = `checkbox-list-label-${fruit}`;
                 return (
                   <div key={idx}>
                     <ListItem
@@ -166,7 +163,7 @@ function Home() {
                     >
                       <ListItemButton role={undefined}>
                         <ListItemText
-                          id={labelId}
+                          id={`checkbox-list-label-${fruit}`}
                           primary={`${idx + 1}. ${fruit}`}
                         />
                       </ListItemButton>

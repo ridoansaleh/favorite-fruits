@@ -1,7 +1,30 @@
-.fruit-options {
+.header-toolbar {
+  width: 100%;
+  max-width: var(--screenWidth);
+  margin: auto;
+  padding-right: 4px !important;
+  box-sizing: border-box;
+}
+
+.home-content {
+  max-width: var(--screenWidth);
+  margin: auto;
+  padding: 50px 10px 10px;
+}
+
+.fruit-list {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
+.favorite-fruits-label {
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-toolbar {
+    padding: 0 !important;
+  }
+}

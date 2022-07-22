@@ -68,9 +68,9 @@ function Login() {
   }
 
   return (
-    <div className="page-wrapper">
+    <>
       <main className="login-content">
-        <h2 style={{ marginBottom: "40px" }}>Sign In Page</h2>
+        <h2 className="signin-label">Sign In Page</h2>
         <Box
           component="form"
           sx={{
@@ -140,7 +140,7 @@ function Login() {
           Username or password is not correct!
         </Alert>
       </Snackbar>
-    </div>
+    </>
   );
 }
 
